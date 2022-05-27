@@ -293,11 +293,21 @@ body {
     justify-content: center;
     width: 30px;
     height: 30px;
+    transition: color 250ms var(--hover-cubic);
 
     background-color: #FFFFFF;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+.modal .btn.close:hover,
+.modal .btn.close:focus {
+    color: var(--color-accent);
+}
+
+.modal .btn.close .icon {
+    fill: currentColor;
 }
 
 .modal .modal-title {
@@ -322,7 +332,7 @@ body {
     width: 100%;
 }
 
-.modal .icon {
+.modal .form .icon {
     position: absolute;
     bottom: 11px;
     left: 12px;
@@ -351,6 +361,7 @@ body {
     height: 40px;
     padding-left: 42px;
     padding-right: 12px;
+    transition: border-color 250ms var(--hover-cubic);
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -406,11 +417,17 @@ body {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+
 }
 
 .modal .custom-checkbox {
     border: 1px solid var(--text-black);
     border-radius: 2px;
+    transition: background-color 250ms var(--hover-cubic);
+}
+
+.modal .checkbox:focus + .custom-checkbox {
+    border-color: var(--color-accent);
 }
 
 .modal .checkbox:checked + .custom-checkbox {
@@ -797,6 +814,7 @@ body {
     padding: 15px 16px;
     width: 358px;
     margin-right: 12px;
+    transition: border-color 250ms var(--hover-cubic);
 
 
     color: var(--white);
@@ -806,7 +824,8 @@ body {
 }
 
 .subscribe-form .input:focus {
-    outline-color: transparent;
+    border: 3px solid var(--color-accent);
+    outline: 0;
 }
 
 .form-btn-box {
