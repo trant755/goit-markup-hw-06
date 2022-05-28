@@ -328,14 +328,20 @@ body {
 }
 
 .modal .label {
+    width: 100%;
+}
+
+.modal .input-box {
     position: relative;
     width: 100%;
 }
 
 .modal .form .icon {
     position: absolute;
-    bottom: 11px;
+    top: 50%;
     left: 12px;
+
+    transform: translatey(-50%);
 }
 
 .modal .label:not(:nth-last-child(-n +3)) {
@@ -426,11 +432,11 @@ body {
     transition: background-color 250ms var(--hover-cubic);
 }
 
-.modal .checkbox:focus + .custom-checkbox {
+.modal .checkbox:focus+.custom-checkbox {
     border-color: var(--color-accent);
 }
 
-.modal .checkbox:checked + .custom-checkbox {
+.modal .checkbox:checked+.custom-checkbox {
     background-color: var(--color-accent);
     border: 0;
 }
@@ -800,7 +806,7 @@ body {
 
 .subscribe-form {
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
 .subscribe-box .label-text {
