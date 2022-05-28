@@ -798,6 +798,11 @@ body {
     width: 570px;
 }
 
+.subscribe-form {
+    display: flex;
+    align-items: center;    
+}
+
 .subscribe-box .label-text {
     display: block;
     font-weight: 700;
